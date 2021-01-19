@@ -1,10 +1,15 @@
 - clean: ['~']
 
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.zshrc: zshrc
-
-- shell:
-  - chsh -s $(which zsh)
+    ~/.profile:
+      force: true
+      path: profile
+    ~/.bashrc:
+      force: true
+      path: bashrc
+    ~/.bash_logout:
+      force: true
+      path: bash_logout
+    ~/.zshrc:
+      force: true
+      path: zshrc
