@@ -4,9 +4,7 @@
     ~/.profile: profile
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
-    ~/.zshrc:
-      force: true
-      path: zshrc
+    ~/.zshrc: zshrc
 
 - shell:
   - chsh -s $(which zsh)
