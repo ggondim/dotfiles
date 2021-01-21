@@ -13,3 +13,19 @@
     ~/.zshrc:
       force: true
       path: zshrc
+
+- shell:
+  - sudo apt update
+  - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+  - sudo apt-get install -y nodejs
+  - sudo apt install build-essential
+  - sudo apt install zsh
+  - sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
+  - chsh -s /usr/bin/zsh
+  - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  - chmod +rwx /usr/lib/node_modules/spaceship-zsh-theme/install.zsh
+  - zsh
+  - /usr/lib/node_modules/spaceship-zsh-theme/install.zsh
+  - source ~/.zshrc
+  - echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
