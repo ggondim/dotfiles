@@ -17,12 +17,11 @@
 - shell:
   - sudo apt update
   - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
-  - sudo apt install build-essential
-  - sudo apt install zsh
+  - sudo apt-get install -y nodejs build-essential zsh curl
   - sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
   - chsh -s /usr/bin/zsh
   - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  - sudo npm i -g spaceship-zsh-theme
   - chmod +rwx /usr/lib/node_modules/spaceship-zsh-theme/install.zsh
   - zsh
   - /usr/lib/node_modules/spaceship-zsh-theme/install.zsh
