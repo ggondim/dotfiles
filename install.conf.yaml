@@ -22,11 +22,8 @@
   - chsh -s /usr/bin/zsh
   - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   - git clone https://github.com/denysdovhan/spaceship-prompt.git "~/.oh-my-zsh/custom/themes/spaceship-prompt" --depth=1
-  - ln -s "~/.oh-my-zsh/custom/spaceship-prompt/spaceship.zsh-theme" "~/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
   - curl -o - https://raw.githubusercontent.com/pascaldevink/spaceship-zsh-theme/master/install.zsh | zsh
-  - chmod +rwx /usr/lib/node_modules/spaceship-zsh-theme/install.zsh
-  - zsh
-  - /usr/lib/node_modules/spaceship-zsh-theme/install.zsh
+  - ln -s "~/.oh-my-zsh/custom/spaceship-prompt/spaceship.zsh-theme" "~/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
   - source ~/.zshrc
   - echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
