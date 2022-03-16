@@ -16,9 +16,6 @@
 
 - shell:
   - sudo apt update
-  - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
-  - sudo apt install build-essential
   - sudo apt install zsh
   - sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
   - chsh -s /usr/bin/zsh
